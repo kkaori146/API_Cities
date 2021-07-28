@@ -1,5 +1,14 @@
 package com.github.kkaori146.citiesapi.cities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
+import org.springframework.data.geo.Point;
+
 @Entity
 @Table(name = "cidade")
 @TypeDefs(value = {
@@ -29,7 +38,7 @@ public class City {
     public City() {
     }
 
-    public City(final Long id, final String name, final Integer uf, final Integer ibge,
+    /*public City(final Long id, final String name, final Integer uf, final Integer ibge,
                 final String geolocation, final Point location) {
         this.id = id;
         this.name = name;
@@ -37,7 +46,7 @@ public class City {
         this.ibge = ibge;
         this.geolocation = geolocation;
         this.location = location;
-    }
+    }*/
 
     public Long getId() {
         return id;

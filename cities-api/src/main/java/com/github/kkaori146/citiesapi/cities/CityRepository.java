@@ -1,4 +1,6 @@
 package com.github.kkaori146.citiesapi.cities;
 
-public interface CityRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CityRepository extends JpaRepository<City, Long> {
 }
